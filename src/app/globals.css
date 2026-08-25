@@ -12,6 +12,26 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@theme {
+  --color-primary: #4a5a44;
+  --color-primary-light: #7e8466;
+  --color-sand: #e7e1d6;
+  --color-stone: #d6d0c6;
+  --color-dark: #1f1f1f;
+  --color-insurance: #243447;
+  --color-insurance-text: #707784;
+  --color-box: #eaf0f7;
+  
+  --font-myfont: var(--font-myfont);
+  --font-myfont2: var(--font-myfont2);
+  --font-vazirmatn: var(--font-vazirmatn);
+  --font-estedad: var(--font-estedad);
+
+  --breakpoint-iphon11: 414px;
+  --breakpoint-500: 500px;
+  --breakpoint-480: 480px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -20,7 +40,8 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffff;
 }
+
