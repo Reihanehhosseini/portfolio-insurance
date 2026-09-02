@@ -2,6 +2,9 @@
 
 import React from "react";
 import { motion } from "motion/react";
+import { MdOutlineMan4 } from "react-icons/md";
+import { MdWoman } from "react-icons/md";
+import { MdOutlineElderlyWoman } from "react-icons/md";
 
 const container = {
   hidden: {},
@@ -82,7 +85,7 @@ export default function HeroContent() {
               whileTap={{ scale: 0.95 }}
               className=" text-[12px] xl:text-[14px]  cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-insurance px-6 py-2 text-white transition hover:scale-105"
             >
-              مشاوره رایگان
+              <a href="tel:+989136541541">مشاوره رایگان</a>
             </motion.button>
             <motion.button
               whileTap={{ scale: 0.95 }}
@@ -93,12 +96,18 @@ export default function HeroContent() {
           </motion.div>
           <motion.div
             variants={item}
-            className="hidden xl:flex gap-17 items-center mt-10"
+            className="hidden xl:flex gap-25 items-center mt-10"
           >
             <div className="flex relative">
-              <span className="bg-insurance-text border border-white rounded-full p-5"></span>
-              <span className="absolute right-6 bg-insurance-text border border-white rounded-full p-5"></span>
-              <span className="absolute right-12 bg-insurance-text border border-white rounded-full p-5"></span>
+              <span className="bg-white border border-white rounded-full p-3">
+                <MdOutlineElderlyWoman size={20} />
+              </span>
+              <span className="absolute right-7 bg-white border border-white rounded-full p-3">
+                <MdOutlineMan4 size={20} />
+              </span>
+              <span className="absolute right-15 bg-white  border border-white rounded-full p-3">
+                <MdWoman size={20} />
+              </span>
             </div>
             <div className="text-insurance-text flex flex-col gap-3">
               <span className="text-insurance text-[14px]">

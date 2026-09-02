@@ -5,6 +5,7 @@ import { calculateThirdPartyInsurance } from "@/utils/thirdPartyInsurance/calcul
 import { THIRD_PARTY_1405 } from "@/utils/thirdPartyInsurance/rates1405";
 import { useState } from "react";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import Button from "@/components/modules/Button";
 
 const inputClass =
   "w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 outline-none transition focus:border-insurance";
@@ -41,24 +42,24 @@ export default function ThirdPartyInsuranceCalculator() {
 
   return (
     <>
-      <section dir="rtl" className="mx-auto w-full lg:hidden">
+      <section dir="rtl" className="mx-auto w-full lg:hidden ">
         {!showCalc && (
-          <div className="h-80 bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center justify-center flex flex-col gap-8 items-center p-10">
-            <div className=" rounded-2xl flex flex-col gap-5 px-5  items-center">
+          <div className="h-80 bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center justify-start flex flex-col gap-4 items-center p-8">
+            <div className=" rounded-2xl flex flex-col gap-5 px-5  items-center justify-start">
               <h1 className="text-insurance font-bold text-[18px]">
                 محاسبه آنلاین بیمه خودرو
               </h1>
-              <p className="text-insurance-text text-[14px]">
+              <p className="text-insurance-text text-[14px] mt-10">
                 جهت محاسبه حق بیمه خود دکمه شروع را فشار دهید
               </p>
             </div>
             <button
-              className=" rounded-2xl px-6 py-3 bg-insurance text-white text-[14px]"
+              className=" rounded-2xl px-7 py-2 bg-insurance text-white text-[13px]"
               onClick={() => {
                 setShowCalc(true);
               }}
             >
-              شروع محاسبه 
+              شروع محاسبه
             </button>
           </div>
         )}
@@ -295,15 +296,17 @@ export default function ThirdPartyInsuranceCalculator() {
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-insurance py-3 font-bold text-[14px] text-white transition hover:opacity-90"
+                className="w-full rounded-xl bg-insurance py-3 font-bold text-[12px] text-white transition hover:opacity-90"
               >
                 محاسبه حق بیمه
               </button>
               <button
-              onClick={()=>{setShowCalc(false)}}
-                className="w-full rounded-xl bg-insurance py-3 font-bold text-[14px] text-white transition hover:opacity-90"
+                onClick={() => {
+                  setShowCalc(false);
+                }}
+                className="w-full rounded-xl bg-insurance py-3 font-bold text-[12px] text-white transition hover:opacity-90"
               >
-                انصراف  
+                انصراف
               </button>
             </form>
 
@@ -573,15 +576,7 @@ export default function ThirdPartyInsuranceCalculator() {
                 className={inputClassWindow}
               />
             </Field>
-            <div className="flex items-center transorm translate-y-1">
-              <button
-                type="submit"
-                className="flex items-center gap-4 rounded-xl bg-insurance  h-11 px-5 text-[12px] text-white transition hover:opacity-90"
-              >
-                محاسبه حق بیمه
-                <IoIosArrowRoundBack size={22} />
-              </button>
-            </div>
+            <Button title="محاسبه حق بیمه" bgColor="insurance" color="white"/>
           </div>
         </form>
         <div className="flex-1 px-10 flex items-center">

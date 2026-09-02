@@ -10,10 +10,10 @@ export default function Services() {
     <section
       dir="rtl"
       id="services"
-      className="w-full bg-white flex flex-col items-center justify-center py-8 gap-7   rounded-t-4xl transform -translate-y-15 sm:-translate-y-55 md:-translate-y-15 "
+      className="w-full bg-white flex flex-col items-center justify-center py-8 gap-7   rounded-t-4xl transform -translate-y-6 mb-10 sm:mb-0 sm:-translate-y-55 md:-translate-y-15 "
     >
       <h1 className="text-[16px] font-bold text-insurance">خدمات بیمه ای ما</h1>
-      <p className="text-[14px] text-center text-insurance-text px-3">
+      <p className="text-[14px] text-center text-insurance-text px-3 mb-5">
         ما در زمینه های بیمه ای ذیل آماده ارائه خدمات به صورت شرایطی به شما می
         باشیم، اعم از:
       </p>
@@ -24,14 +24,14 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.12 }}
-            className="w-40 h-30 bg-white rounded-xl  shadow-[0_0_10px_rgba(36,52,71,0.7)] flex flex-col items-center justify-center gap-4 py-3"
+            className="w-40 h-30 bg-white rounded-xl  shadow-[0_0_10px_rgba(36,52,71,0.7)] flex flex-col items-center justify-center gap-1 py-3"
           >
             <div className="w-full flex items-center justify-center">
               <span className="bg-transparent rounded-full p-3 text-insurance">
                 {item.icon}
               </span>
             </div>
-            <h4 className="text-insurance font-bold">{item.title}</h4>
+            <h4 className="text-insurance text-[14px]">{item.title}</h4>
             <p className="text-[11px] hidden min-[1300px]:block">{item.desc}</p>
           </motion.div>
         ))}
@@ -47,16 +47,16 @@ export default function Services() {
             className="w-40 h-50 bg-white rounded-xl  shadow-[0_0_10px_rgba(36,52,71,0.7)] flex flex-col items-center justify-center gap-4 py-3"
           >
             <div className="w-full flex items-center justify-center">
-              <span className="bg-stone rounded-full p-3">{item.icon}</span>
+              <span className="bg-box rounded-full p-3">{item.icon}</span>
             </div>
-            <h4>{item.title}</h4>
-            <p className="text-[11px]">{item.desc}</p>
+            <h4 className="text-insurance">{item.title}</h4>
+            <p className="text-[11px] text-insurance-text">{item.desc}</p>
           </motion.div>
         ))}
       </div>
       <button
         onClick={() => setShowAll(!showAll)}
-        className="min-[1300px]:hidden mx-5 mt-6 py-2 px-9 rounded-full bg-insurance text-white text-[14px] transition-all duration-300 hover:scale-105"
+        className="min-[1300px]:hidden mx-5 mt-6 py-2 px-9 rounded-full bg-insurance text-white text-[12px] sm:text-[14px] transition-all duration-300 hover:scale-105"
       >
         {showAll ? "بستن خدمات" : "مشاهده همه خدمات"}
       </button>
