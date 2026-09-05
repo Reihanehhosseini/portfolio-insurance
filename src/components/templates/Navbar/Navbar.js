@@ -19,37 +19,37 @@ import { MdOutlineEmojiPeople } from "react-icons/md";
      id: 1,
      title: "خانه",
      href: "#hero",
-     icon: <AiOutlineHome size={27} className="text-[#ebd2a5]" />,
+     icon: <AiOutlineHome size={25} className="text-[#ebd2a5]" />,
    },
    {
      id: 2,
      title: "خدمات",
      href: "#services",
-     icon: <CiStickyNote size={27} className="text-[#ebd2a5]" />,
+     icon: <CiStickyNote size={25} className="text-[#ebd2a5]" />,
    },
    {
      id: 3,
      title: "استعلام و محاسبه",
      href: "#inquiry",
-     icon: <PiCalculatorBold size={27} className="text-[#ebd2a5]" />,
+     icon: <PiCalculatorBold size={25} className="text-[#ebd2a5]" />,
    },
    {
      id: 4,
      title: "نحوه صدور",
      href: "#process",
-     icon: <MdOutlineDone size={27} className="text-[#ebd2a5]" />,
+     icon: <MdOutlineDone size={25} className="text-[#ebd2a5]" />,
    },
    {
      id: 5,
      title: "سوالات متداول",
      href: "#faq",
-     icon: <BsQuestionCircle size={27} className="text-[#ebd2a5]" />,
+     icon: <BsQuestionCircle size={25} className="text-[#ebd2a5]" />,
    },
    {
      id: 6,
      title: "درباره من",
      href: "#about",
-     icon: <MdOutlineEmojiPeople size={27} className="text-[#ebd2a5]" />,
+     icon: <MdOutlineEmojiPeople size={25} className="text-[#ebd2a5]" />,
    },
  ];
 
@@ -78,7 +78,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 2.3 }}
-      className={`fixed px-3 500:px-8  left-0 right-0 xl:px-0 py-2  sm:px-2  z-250 transition-all duration-500 ${scrolled ? "mt-0!  pt-0! backdrop-blur-3xl bg-white/10 shadow-sm" : "bg-transparent "}`}
+      className={`absolute px-3 500:px-8  left-0 right-0 xl:px-0 py-2  sm:px-2  z-250 transition-all duration-500 `}
     >
       <div className="mx-auto flex h-20 items-center justify-between px-7 md:px-11">
         <div className="flex  gap-2 items-center">
@@ -142,19 +142,19 @@ export default function Navbar() {
                 <span className="h-px w-15 bg-linear-to-r from-transparent via-[#C8A86B]/50 to-transparent" />
               </div>
             </div>
-            <nav className="flex flex-col gap-3 ">
+            <nav className="flex flex-col  ">
               {navbarList.map((item, index) => (
                 <div key={item.id} className="relative ">
                   <Link
                     href={item.href}
-                    className={`flex items-center gap-6 py-4 px-3 rounded-2xl  text-[14px] transition-all duration-300 ${activeIndex === index ? "bg-insurance" : ""} `}
+                    className={`flex items-center gap-6 py-5 px-5 rounded-2xl  text-[14px] transition-all duration-300 ${activeIndex === index ? "bg-[#0F2132] shadow-[2px_2px_5px_rgba(9,9,9,0.7)]" : ""} `}
                     onClick={() => {
                       setOpenMenu(false);
                       setActiveIndex(index);
                     }}
                   >
                     {item.icon}
-                    <span className="text-[#ebd2a5] flex items-end mt-1">
+                    <span className="text-[#ebd2a5] text-[12px] flex items-end mt-1">
                       {item.title}
                     </span>
                   </Link>

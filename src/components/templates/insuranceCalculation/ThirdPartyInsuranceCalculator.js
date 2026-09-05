@@ -557,7 +557,7 @@ export default function ThirdPartyInsuranceCalculator() {
         </form>
         <div className="flex-1 px-10 flex items-center">
           {showResult && (
-            <div className=" overflow-hidden rounded-3xl bg-transparent backdrop-blur-3xl text-insurance shadow-[0_10px_35px_rgba(36,52,71,0.2)]">
+            <div className=" overflow-hidden rounded-3xl bg-transparent backdrop-blur-3xl text-insurance shadow-[5px_5px_5px_rgba(36,52,71,0.7)]">
               <div className="p-7 text-center">
                 <p className="text-sm text-white/60">حق بیمه تقریبی</p>
 
