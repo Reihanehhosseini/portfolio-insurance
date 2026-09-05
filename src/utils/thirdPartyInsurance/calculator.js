@@ -173,7 +173,6 @@ export function calculateThirdPartyInsurance(values) {
     bodilyClaimsCount,
     mixedClaimsCount,
 
-
     // پوشش
     financialCoverage,
 
@@ -211,19 +210,10 @@ export function calculateThirdPartyInsurance(values) {
   const usagePercent = THIRD_PARTY_1405.usageIncrease[usage] ?? 0;
 
   // ========================================
-  // 4. نمره منفی
-  // ========================================
-
-  // ========================================
-  // 5. تخلفات حادثه‌ساز
-  // ========================================
-  // ========================================
   // 6. مجموع افزایش‌ها
   // ========================================
 
-  const totalIncreasePercent =
-    usagePercent +
-    oldVehiclePercent ;
+  const totalIncreasePercent = usagePercent + oldVehiclePercent;
 
   const totalIncrease = percentOf(baseRate, totalIncreasePercent);
 
@@ -285,8 +275,7 @@ export function calculateThirdPartyInsurance(values) {
   // 12. تعهد مالی
   // ========================================
 
-  const selectedFinancialCoverage =
-    Number(financialCoverage) || THIRD_PARTY_1405.coverage.minimumFinancial;
+  const selectedFinancialCoverage = THIRD_PARTY_1405.coverage.minimumFinancial;
 
   /*
 فعلاً مبلغ تعهد مالی مازاد را
@@ -359,25 +348,14 @@ export function calculateThirdPartyInsurance(values) {
 
     details: {
       vehicleAge,
-
       usagePercent,
-
       oldVehiclePercent,
-
-
-
       totalIncreasePercent,
-
       originalNoClaimPercent,
-
       claimReduction: claimReduction.totalReduction,
-
       finalNoClaimPercent,
-
       durationPercent,
-
       selectedFinancialCoverage,
-
     },
   };
 }

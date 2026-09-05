@@ -90,14 +90,14 @@ export default function Navbar() {
             onClick={() => {
               setShowPhone(!showPhone);
             }}
-            className="items-center overflow-hidden gap-2 w-40.5 justify-center hidden lg:flex rounded-full bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)]  text-[12px] sm:px-6 py-1 text-insurance transition hover:scale-105 "
+            className="items-center overflow-hidden  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] gap-2 w-40.5 justify-center hidden lg:flex rounded-full bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)]  text-[12px] sm:px-6 py-1 text-insurance transition hover:scale-105 "
           >
             {showPhone ? "0913-654-1541" : "شیما مصدق"}
             <MdPhone />
           </button>
         </div>
 
-        <nav className="hidden items-center py-2 px-20 rounded-full bg-transparent  backdrop-blur-sm   transition-all duration-500  text-[13px] gap-10 min-[1102px]:gap-15 lg:flex justify-evenly  text-insurance">
+        <nav className="hidden items-center py-2 px-20 rounded-full bg-transparent    transition-all duration-500  text-[13px] gap-10 min-[1102px]:gap-15 lg:flex justify-evenly  text-insurance">
           {navbarList.map((item) => (
             <Link key={item.id} href={item.href}>
               {item.title}
@@ -105,7 +105,7 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="text-[16px] font-semibold text-primary flex flex-col gap-1 justify-center text-center font-myfont">
-          <div className="w-full flex justify-center md:mt-2">
+          <div className="w-full flex justify-center md:mt-2 ">
             <img
               src="/images/logoblue.png"
               alt="logo"
@@ -143,7 +143,6 @@ export default function Navbar() {
               </div>
             </div>
             <nav className="flex flex-col gap-3 ">
-              
               {navbarList.map((item, index) => (
                 <div key={item.id} className="relative ">
                   <Link

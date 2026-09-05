@@ -25,10 +25,7 @@ const aboutInfo = [
 export default function About() {
   const [showFaq, setShowFaq] = useState(false);
   return (
-    <div
-      className="w-full rounded-2xl bg-[url(/images/blue.PNG)]"
-      id="about"
-    >
+    <div className="w-full rounded-2xl bg-[url(/images/blue.PNG)]" id="about">
       <div className=" w-full lg:px-5">
         <div
           className={` ${showFaq ? "h-218" : "h-21"} overflow-hidden bg-transparent  rounded-2xl flex flex-col justify-between px-1  text-justify `}
@@ -53,10 +50,7 @@ export default function About() {
               }}
             />
           </div>
-          <h1 className="text-[18px] text-white/80 mt-10 font-bold px-6">
-            درباره من
-          </h1>
-          <p className="text-white/60  text-[14px] lg:text-[16px] px-6">
+          <p className="text-white/60  text-[14px] lg:text-[16px] px-6 mt-5">
             من شیما مصدق کارشناس مدیریت بیمه با 14 سال تجربه در شرکت بیمه آسیا ،
             آماده ارائه مشاوره و صدور بیمه نامه به شما در هر ساعت از شبانه روز
             می باشم.
@@ -71,7 +65,16 @@ export default function About() {
             شفافیت صداقت و خدمات حرفه ای
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
-            ارتباط ما با شما بعد از صدور بیمه نامه به پایان نمی رسد . از پیگیری امور بیمه نامه و پاسخگویی به سوالات تا راهنمایی و همراهی در زمان خسارت در کنار شما هستم تا با آرامش و اطمینان بیشتری از پوشش بیمه خود استفاده کنید
+            ارتباط ما با شما بعد از صدور بیمه نامه به پایان نمی رسد . از پیگیری
+            امور بیمه نامه و پاسخگویی به سوالات تا راهنمایی و همراهی در زمان
+            خسارت در کنار شما هستم تا با آرامش و اطمینان بیشتری از پوشش بیمه خود
+            استفاده کنید
+          </p>
+          <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
+            راه های ارتباطی با ما از طریق واتس آپ ، تلگرام و تماس تلفنی
+            <br />
+            <br />
+            تلفن تماس: 09136541541
           </p>
           <div className="w-full grid grid-cols-3 gap-1 sm:gap-4 items-center justify-between  mt-5">
             {aboutInfo.map((item, index) => (

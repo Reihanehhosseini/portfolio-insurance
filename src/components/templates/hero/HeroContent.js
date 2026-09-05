@@ -83,13 +83,13 @@ export default function HeroContent() {
           >
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className=" text-[12px] xl:text-[14px]  cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-insurance px-6 py-2 text-white transition hover:scale-105"
+              className=" text-[12px] xl:text-[14px]  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-insurance px-6 py-2 text-white transition hover:scale-105"
             >
               <a href="tel:+989136541541">مشاوره رایگان</a>
             </motion.button>
             <motion.button
               whileTap={{ scale: 0.95 }}
-              className="text-[12px] xl:text-[14px]  cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)] px-6 py-2 text-insurance transition  hover:scale-105"
+              className="text-[12px] xl:text-[14px]  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)] px-6 py-2 text-insurance transition  hover:scale-105"
             >
               <a href="#inquiry">استعلام حق بیمه</a>
             </motion.button>

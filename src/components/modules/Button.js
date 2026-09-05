@@ -7,7 +7,7 @@ export default function Button({title , bgColor , color , onClick}) {
       <button
         type="submit"
         onClick={onClick}
-        className={`flex items-center gap-1 rounded-xl bg-${bgColor}  h-11 px-5 text-[12px] text-${color} transition hover:opacity-90 cursor-pointer`}
+        className={`flex items-center gap-1 rounded-xl bg-${bgColor}   h-11 px-5 text-[12px] text-${color} transition hover:opacity-90 cursor-pointer  transition hover:scale-105`}
       >
         {title}
         <IoIosArrowRoundBack size={22} />

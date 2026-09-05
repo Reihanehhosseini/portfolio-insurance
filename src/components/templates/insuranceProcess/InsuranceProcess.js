@@ -15,13 +15,13 @@ const steps = [
   {
     number: "01",
     title: "1.مشاوره",
-    description: "نیازها و شرایط شما بررسی و تحلیل میشود",
+    description: "پس از تماس با ما ، نیازها و شرایط شما بررسی و تحلیل میشود",
     icon: Headphones,
   },
   {
     number: "02",
     title: "2.اطلاعات اولیه ",
-    description: " اطلاعات و مدارک مورد نیاز بیمه نامه دریافت میشود",
+    description: " اطلاعات و مدارک مورد نیاز بیمه نامه به صورت آنلاین دریافت میشود",
     icon: BookOpen,
   },
   {
@@ -85,7 +85,7 @@ export default function InsuranceProcess() {
                   transition={{ duration: 0.5, delay: index * 0.12 }}
                   className="relative flex flex-col items-center text-center"
                 >
-                  <div className="mb-7 flex h-22 w-22 items-center justify-center rounded-full border border-gray-200 bg-white shadow-[0_7px_20px_rgba(0,0,0,0.6)]">
+                  <div className="mb-7 flex h-22 w-22 items-center justify-center rounded-full border border-gray-200 bg-white  shadow-[6px_6px_5px_rgba(36,52,71,0.7)] transition hover:scale-105">
                     <Icon
                       size={30}
                       strokeWidth={1.4}
@@ -111,7 +111,7 @@ export default function InsuranceProcess() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute right-2 top-7 bottom-8 w-px bg-insurance-text"
+            className="absolute right-2 top-8 bottom-8 w-px bg-insurance-text"
           />
           <div className="space-y-10">
             {steps.map((step, index) => {
@@ -123,7 +123,7 @@ export default function InsuranceProcess() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.12 }}
-                  className="relative flex items-center gap-8"
+                  className="relative flex items-center gap-8 "
                 >
                   <div className="flex gap-5">
                     <div className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-insurance text-[12px] text-insurance shadow-md"></div>
@@ -137,7 +137,7 @@ export default function InsuranceProcess() {
                     </p>
                   </div>
                   <div className="flex flex-1 items-center justify-end gap-4">
-                    <div className="bg-box rounded-full p-4">
+                    <div className="bg-box rounded-full p-4  shadow-[5px_4px_5px_rgba(36,52,71,0.7)]">
                       <Icon
                         size={30}
                         strokeWidth={1.4}

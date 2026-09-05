@@ -4,7 +4,6 @@ import { useFormik } from "formik";
 import { calculateThirdPartyInsurance } from "@/utils/thirdPartyInsurance/calculator";
 import { THIRD_PARTY_1405 } from "@/utils/thirdPartyInsurance/rates1405";
 import { useState } from "react";
-import { IoIosArrowRoundBack } from "react-icons/io";
 import Button from "@/components/modules/Button";
 
 const inputClass =
@@ -16,6 +15,10 @@ export default function ThirdPartyInsuranceCalculator() {
   const [showResult, setShowResult] = useState(false);
   const [showCalc, setShowCalc] = useState(false);
 
+  const cancelFunc = () => {
+    setShowCalc(false);
+    setShowResult(false);
+  };
   const formik = useFormik({
     initialValues: {
       vehicleType: "fourCylinder",
@@ -25,7 +28,6 @@ export default function ThirdPartyInsuranceCalculator() {
       financialClaimsCount: 0,
       bodilyClaimsCount: 0,
       mixedClaimsCount: 0,
-      financialCoverage: THIRD_PARTY_1405.coverage.minimumFinancial,
       insuranceDuration: 365,
       delayDays: 0,
     },
@@ -44,23 +46,23 @@ export default function ThirdPartyInsuranceCalculator() {
     <>
       <section dir="rtl" className="mx-auto w-full lg:hidden ">
         {!showCalc && (
-          <div className="h-80 bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center justify-start flex flex-col gap-4 items-center p-8">
-            <div className=" rounded-2xl flex flex-col gap-5 px-5  items-center justify-start">
-              <h1 className="text-insurance font-bold text-[18px]">
+          <div className="h-80 bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center justify-start flex flex-col gap-12 items-start py-12 px-8">
+            <div className=" rounded-2xl flex flex-col gap-5 items-center justify-start w-[60%]">
+              <h1 className="text-insurance font-bold text-[18px] flex justify-start w-full">
                 محاسبه آنلاین بیمه خودرو
               </h1>
-              <p className="text-insurance-text text-[14px] mt-10">
+              <p className="text-insurance-text text-[14px] ">
                 جهت محاسبه حق بیمه خود دکمه شروع را فشار دهید
               </p>
             </div>
-            <button
-              className=" rounded-2xl px-7 py-2 bg-insurance text-white text-[13px]"
+            <Button
+              title="شروع محاسبه"
+              bgColor="insurance"
+              color="white"
               onClick={() => {
                 setShowCalc(true);
               }}
-            >
-              شروع محاسبه
-            </button>
+            />
           </div>
         )}
         {/* FORM */}
@@ -225,20 +227,6 @@ export default function ThirdPartyInsuranceCalculator() {
                     className={`${inputClass} text-[12px] text-insurance-text`}
                   >
                     <option value="70000000">۷۰ میلیون تومان</option>
-
-                    <option value="100000000">۱۰۰ میلیون تومان</option>
-
-                    <option value="200000000">۲۰۰ میلیون تومان</option>
-
-                    <option value="300000000">۳۰۰ میلیون تومان</option>
-
-                    <option value="500000000">۵۰۰ میلیون تومان</option>
-
-                    <option value="700000000">۷۰۰ میلیون تومان</option>
-
-                    <option value="1000000000">۱ میلیارد تومان</option>
-
-                    <option value="1400000000">۱.۴ میلیارد تومان</option>
                   </select>
                 </Field>
 
@@ -296,15 +284,13 @@ export default function ThirdPartyInsuranceCalculator() {
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-insurance py-3 font-bold text-[12px] text-white transition hover:opacity-90"
+                className="w-full rounded-xl bg-insurance py-3 font-bold text-[12px] text-white transition  shadow-[5px_5px_5px_rgba(36,52,71,0.7)]  "
               >
                 محاسبه حق بیمه
               </button>
               <button
-                onClick={() => {
-                  setShowCalc(false);
-                }}
-                className="w-full rounded-xl bg-insurance py-3 font-bold text-[12px] text-white transition hover:opacity-90"
+                onClick={cancelFunc}
+                className="w-full rounded-xl bg-insurance py-3 font-bold text-[12px] text-white transition  shadow-[5px_5px_5px_rgba(36,52,71,0.7)]"
               >
                 انصراف
               </button>
@@ -312,12 +298,12 @@ export default function ThirdPartyInsuranceCalculator() {
 
             {/* RESULT */}
             {showResult && (
-              <div className="mt-6 overflow-hidden rounded-3xl bg-insurance text-white shadow-[0_10px_35px_rgba(36,52,71,0.2)]">
+              <div className="mx-3 mt-6 overflow-hidden rounded-3xl bg-insurance text-white shadow-[5px_5px_5px_rgba(36,52,71,0.7)]">
                 <div className="p-7 text-center">
                   <p className="text-sm text-white/60">حق بیمه تقریبی</p>
 
                   <div className="mt-3">
-                    <span className="text-4xl font-black">
+                    <span className="text-2xl font-black">
                       {formatPrice(result.total)}
                     </span>
 
@@ -327,7 +313,7 @@ export default function ThirdPartyInsuranceCalculator() {
 
                 {/* DETAILS */}
 
-                <div className="border-t border-white/10 px-6 py-5">
+                <div className="border-t text-[14px] border-white/10 px-6 py-5">
                   <ResultRow label="حق بیمه پایه" value={result.baseRate} />
 
                   {result.totalIncrease > 0 && (
@@ -368,7 +354,7 @@ export default function ThirdPartyInsuranceCalculator() {
                     />
                   )}
 
-                  <div className="mt-4 border-t border-white/10 pt-4">
+                  <div className="mt-4 text-[14px] border-t border-white/10 pt-4">
                     <ResultRow
                       label="مالیات ارزش افزوده"
                       value={result.vat}
@@ -379,6 +365,10 @@ export default function ThirdPartyInsuranceCalculator() {
 
                 <div className="px-6 pb-6">
                   <p className="text-center text-xs leading-6 text-white/40">
+                    مبنای محاسبه تعهد مالی: 70 میلیون تومان، برای دریافت استعلام
+                    با سقف تعهد بالاتر، با ما در ارتباط باشید.
+                  </p>
+                  <p className="text-center text-xs leading-6 text-white/40 mt-5">
                     مبلغ نمایش‌داده‌شده برآوردی است و مبلغ نهایی صدور می‌تواند
                     با توجه به استعلام سوابق، شرکت بیمه و شرایط بیمه‌نامه متفاوت
                     باشد.
@@ -524,20 +514,6 @@ export default function ThirdPartyInsuranceCalculator() {
                 className={inputClassWindow}
               >
                 <option value="70000000">۷۰ میلیون تومان</option>
-
-                <option value="100000000">۱۰۰ میلیون تومان</option>
-
-                <option value="200000000">۲۰۰ میلیون تومان</option>
-
-                <option value="300000000">۳۰۰ میلیون تومان</option>
-
-                <option value="500000000">۵۰۰ میلیون تومان</option>
-
-                <option value="700000000">۷۰۰ میلیون تومان</option>
-
-                <option value="1000000000">۱ میلیارد تومان</option>
-
-                <option value="1400000000">۱.۴ میلیارد تومان</option>
               </select>
             </Field>
             <Field label="مدت بیمه‌نامه">
@@ -576,12 +552,12 @@ export default function ThirdPartyInsuranceCalculator() {
                 className={inputClassWindow}
               />
             </Field>
-            <Button title="محاسبه حق بیمه" bgColor="insurance" color="white"/>
+            <Button title="محاسبه حق بیمه" bgColor="insurance" color="white" />
           </div>
         </form>
         <div className="flex-1 px-10 flex items-center">
           {showResult && (
-            <div className="mt-6 overflow-hidden rounded-3xl bg-transparent backdrop-blur-3xl text-insurance shadow-[0_10px_35px_rgba(36,52,71,0.2)]">
+            <div className=" overflow-hidden rounded-3xl bg-transparent backdrop-blur-3xl text-insurance shadow-[0_10px_35px_rgba(36,52,71,0.2)]">
               <div className="p-7 text-center">
                 <p className="text-sm text-white/60">حق بیمه تقریبی</p>
 
@@ -646,11 +622,15 @@ export default function ThirdPartyInsuranceCalculator() {
                 </div>
               </div>
 
-              <div className="px-6 pb-6">
+              <div className="px-6 pb-6 flex flex-col">
                 <p className="text-center text-xs leading-6 text-white/40">
                   مبلغ نمایش‌داده‌شده برآوردی است و مبلغ نهایی صدور می‌تواند با
                   توجه به استعلام سوابق، شرکت بیمه و شرایط بیمه‌نامه متفاوت
                   باشد.
+                </p>
+                <p className="text-center text-xs leading-6 text-white/40">
+                  مبنای محاسبه تعهد مالی: 70 میلیون تومان، برای دریافت استعلام
+                  با سقف تعهد بالاتر، با ما در ارتباط باشید.
                 </p>
               </div>
             </div>
@@ -683,7 +663,7 @@ function Field({ label, children }) {
 
 function ResultRow({ label, value, plus = false, minus = false }) {
   return (
-    <div className="flex items-center justify-between py-2 text-sm">
+    <div className="flex items-center justify-between py-2 text-[13px]">
       <span className="text-white/60">{label}</span>
 
       <span

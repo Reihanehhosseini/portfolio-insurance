@@ -69,7 +69,7 @@ export default function FAQ() {
     <section
       dir="ltr"
       id="faq"
-      className="relative  border border-box rounded-2xl pt-3 bg-[url(/images/accardeon.PNG)] py-5"
+      className="relative rounded-2xl pt-3 bg-[url(/images/accardeon.PNG)] py-5"
     >
       <div className="absolute bottom-0 left-0 -z-10 h-64 w-full  " />
       <div className="mx-auto w-full max-w-7xl px-3 sm:px-8 lg:px-10" dir="rtl">
