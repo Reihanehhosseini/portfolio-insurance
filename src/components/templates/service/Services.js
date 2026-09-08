@@ -17,10 +17,12 @@ export default function Services() {
         delay: 3.2,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="w-full bg-white flex flex-col items-center justify-center py-8 gap-7   rounded-t-4xl transform -translate-y-6 mb-10 sm:mb-0 sm:-translate-y-55 md:-translate-y-15 "
+      className="w-full bg-white flex flex-col items-center justify-center py-8 sm:py-16 gap-7   rounded-t-4xl transform -translate-y-6 mb-10 sm:mb-0 sm:-translate-y-55 md:-translate-y-15 "
     >
-      <h1 className="text-[16px] font-bold text-insurance">خدمات بیمه ای ما</h1>
-      <p className="text-[14px] text-center text-insurance-text px-3 mb-5">
+      <h1 className="text-[16px] lg:text-xl  font-bold text-insurance">
+        خدمات بیمه ای ما
+      </h1>
+      <p className="sm:text-base text-sm text-center text-gray-500 leading-7 px-3 mb-5">
         ما در زمینه های بیمه ای ذیل آماده ارائه خدمات به صورت شرایطی به شما می
         باشیم، اعم از:
       </p>

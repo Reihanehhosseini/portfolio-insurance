@@ -6,6 +6,7 @@ import Services from "@/components/templates/service/Services";
 import About from "@/components/templates/aboutme/About";
 import Section from "@/components/templates/section/Section";
 import Footer from "@/components/templates/footer/Footer";
+import Whyme from "@/components/templates/whyme/Whyme";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <InsuranceCalculation/>
       <InsuranceProcess/>
       <Section/>
+      <Whyme/>
       <Footer/>
     </div>
   );

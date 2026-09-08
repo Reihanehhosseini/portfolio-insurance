@@ -78,7 +78,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, delay: 2.3 }}
-      className={`absolute px-3 500:px-8  left-0 right-0 xl:px-0 py-2  sm:px-2  z-250 transition-all duration-500 `}
+      className={`absolute sm:fixed px-3 500:px-8  left-0 right-0 xl:px-0 py-2  sm:px-2  z-250 transition-all duration-500 ${scrolled ? "sm:mt-0!  sm:pt-0! sm:backdrop-blur-3xl sm:shadow-sm" : "bg-transparent "}`}
     >
       <div className="mx-auto flex h-20 items-center justify-between px-7 md:px-11">
         <div className="flex  gap-2 items-center">
