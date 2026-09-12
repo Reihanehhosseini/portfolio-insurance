@@ -22,7 +22,7 @@ export default function Services() {
       <h1 className="text-[16px] lg:text-xl  font-bold text-insurance">
         خدمات بیمه ای ما
       </h1>
-      <p className="sm:text-base text-sm text-center text-gray-500 leading-7 px-3 mb-5">
+      <p className=" text-sm text-center text-gray-500 px-6 leading-8 mb-5">
         ما در زمینه های بیمه ای ذیل آماده ارائه خدمات به صورت شرایطی به شما می
         باشیم، اعم از:
       </p>
@@ -40,8 +40,8 @@ export default function Services() {
                 {item.icon}
               </span>
             </div>
-            <h4 className="text-insurance text-[14px]">{item.title}</h4>
-            <p className="text-[11px] hidden min-[1300px]:block">{item.desc}</p>
+            <h4 className="text-insurance text-[14px] text-center!">{item.title}</h4>
+            <p className="text-[11px] hidden min-[1300px]:block text-center!">{item.desc}</p>
           </motion.div>
         ))}
       </div>

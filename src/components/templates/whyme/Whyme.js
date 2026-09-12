@@ -76,7 +76,7 @@ export default function WhyChooseMe() {
                 className={`absolute z-20 flex max-w-55 flex-col items-center text-center gap-4 ${item.position === "top-right" ? "top-16 right-0" : ""} ${item.position === "top-left" ? "top-16 left-0" : ""} ${item.position === "bottom-right" ? "bottom-16 right-0" : ""} ${item.position === "bottom-left" ? "bottom-16 left-0" : ""}`}
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue bg-white text-insurance shadow-[5px_5px_5px_rgba(36,52,71,0.15)]">
-                  <Icon size={21} strokeWidth={1.6} />
+                  <Icon size={21} strokeWidth={1.6} className="text-insurance"/>
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-insurance">
@@ -114,7 +114,7 @@ export default function WhyChooseMe() {
                   className="flex flex-col items-center text-center gap-2"
                 >
                   <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-full border border-blue bg-white text-insurance shadow-[5px_5px_5px_rgba(36,52,71,0.15)]">
-                    <Icon size={19} strokeWidth={1.6} />
+                    <Icon size={19} strokeWidth={1.6} className="text-insurance"/>
                   </div>
 
                   <h3 className="text-sm font-bold text-insurance">

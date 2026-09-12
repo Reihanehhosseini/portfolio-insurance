@@ -92,7 +92,7 @@ export default function Navbar() {
             }}
             className="items-center overflow-hidden  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] gap-2 w-40.5 justify-center hidden lg:flex rounded-full bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)]  text-[12px] sm:px-6 py-1 text-insurance transition hover:scale-105 "
           >
-            {showPhone ? "0913-654-1541" : "شیما مصدق"}
+            {showPhone ? "541  541 6 0913" : "شیما مصدق"}
             <MdPhone />
           </button>
         </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
             <img
               src="/images/logoblue.png"
               alt="logo"
-              className="w-9 md:w-13 xl:w-15"
+              className="w-12 md:w-13 xl:w-15"
             />
           </div>
           <span className="text-insurance text-[12px] font-estedad">

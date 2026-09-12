@@ -8,8 +8,8 @@ import { useState } from "react";
 const aboutInfo = [
   {
     id: 1,
-    title: "24/7",
-    desc: "پشتیبانی",
+    title: "پشتیبانی",
+    desc: "24/7",
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ const aboutInfo = [
   },
   {
     id: 3,
-    title: "اصغهان",
-    desc: "محل فعالیت",
+    title: "محل فعالیت",
+    desc: "اصفهان و شهرضا",
   },
 ];
 export default function About() {
@@ -71,12 +71,12 @@ export default function About() {
             استفاده کنید
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
-            راه های ارتباطی با ما از طریق واتس آپ ، تلگرام و تماس تلفنی
+            راه های ارتباطی با ما از طریق واتس آپ ، تلگرام ، بله ، روبیکا و تماس تلفنی
             <br />
             <br />
-            تلفن تماس: 09136541541
+            تلفن تماس: 541 541 6 0913
           </p>
-          <div className="w-full grid grid-cols-3 gap-1 sm:gap-4 items-center justify-between  mt-5">
+          <div className="w-full grid grid-cols-3 gap-1 sm:gap-4 items-center justify-between px-3 mt-5">
             {aboutInfo.map((item, index) => (
               <motion.div
                 key={item.id}

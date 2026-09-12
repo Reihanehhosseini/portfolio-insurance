@@ -61,21 +61,20 @@ export default function HeroContent() {
             <span className="font-vazirmatn! ">با انتخابی هوشمند</span>
           </motion.h1>
           <motion.div className="flex flex-col gap-2  " variants={item}>
-            <button className="flex font-bold justify-center md:justify-start rounded-full text-[13px] lg:text-[14px] xl:text-[16px] text-[#23395B] transition hover:scale-105 ">
+            <button className="mt-5 md:mt-0 flex font-bold justify-center md:justify-start rounded-full text-[16px] md:text-[14px] xl:text-[16px] text-[#23395B] transition hover:scale-105 ">
               شیما مصدق
             </button>
-            <div className=" text-[12px] lg:text-[14px] leading-7 text-[#6B7280] font-estedad ">
+            <div className=" text-[14px] leading-7 text-[#6B7280] ">
               <span className="">
                 ارائه انواع بیمه های معتبر ، مشاوره تخصصی و خدمات بیمه ای
               </span>
             </div>
           </motion.div>
-
           <motion.p
             variants={item}
-            className="text-[12px] lg:text-[14px] text-insurance-text font-estedad"
+            className="text-[12px] lg:text-[14px] text-insurance-text"
           >
-            14 سال تجربه در صنعت بیمه
+             14 سال تجربه در صنعت بیمه 
           </motion.p>
           <motion.div
             variants={item}
@@ -100,13 +99,13 @@ export default function HeroContent() {
           >
             <div className="flex relative">
               <span className="bg-white border border-white rounded-full p-3">
-                <MdOutlineElderlyWoman size={20} />
+                <MdOutlineElderlyWoman size={20} className="text-insurance"/>
               </span>
               <span className="absolute right-7 bg-white border border-white rounded-full p-3">
-                <MdOutlineMan4 size={20} />
+                <MdOutlineMan4 size={20} className="text-insurance"/>
               </span>
               <span className="absolute right-15 bg-white  border border-white rounded-full p-3">
-                <MdWoman size={20} />
+                <MdWoman size={20} className="text-insurance"/>
               </span>
             </div>
             <div className="text-insurance-text flex flex-col gap-3">

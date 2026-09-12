@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
       dir="rtl"
       className={`${geistSans.variable} ${geistMono.variable} ${myFont.variable} ${myFont2.variable} ${vazirMatn.variable} ${estedad.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-estedad!">{children}</body>
+      <body className="min-h-full flex flex-col font-myfont!">{children}</body>
     </html>
   );
 }

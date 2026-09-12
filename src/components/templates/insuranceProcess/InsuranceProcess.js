@@ -89,7 +89,7 @@ export default function InsuranceProcess() {
                     <Icon
                       size={30}
                       strokeWidth={1.4}
-                      className="text-[#263125]"
+                      className="text-insurance"
                     />
                   </div>
                   <div className="mt-7 msx-w-[230px]">
