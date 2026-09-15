@@ -13,8 +13,8 @@ const aboutInfo = [
   },
   {
     id: 2,
-    title: "+14",
-    desc: "سال تجربه",
+    title: "تجربه",
+    desc: "14 سال",
   },
   {
     id: 3,
@@ -23,12 +23,12 @@ const aboutInfo = [
   },
 ];
 export default function About() {
-  const [showFaq, setShowFaq] = useState(false);
+  const [showAbout, setshowAbout] = useState(false);
   return (
     <div className="w-full rounded-2xl bg-[url(/images/blue.PNG)]" id="about">
       <div className=" w-full lg:px-5">
         <div
-          className={` ${showFaq ? "h-218" : "h-21"} overflow-hidden bg-transparent  rounded-2xl flex flex-col justify-between px-1  text-justify `}
+          className={` ${showAbout ? "h-218" : "h-21"} overflow-hidden bg-transparent  rounded-2xl flex flex-col justify-between px-1  text-justify `}
         >
           <div className=" rounded-2xl flex items-center mt-3  justify-between  px-6">
             <div className="flex lg:gap-8 gap-3 items-center">
@@ -36,42 +36,42 @@ export default function About() {
                 <CiFaceMeh className="text-insurance w-5 h-5" />
               </div>
               <div className="flex flex-col gap-1">
-                <span className="text-white text-[12px] lg:text-[15px]">
+                <h2 className="text-white text-[12px] lg:text-[15px]">
                   درباره من
-                </span>
+                </h2>
               </div>
             </div>
             <Button
-              title={showFaq ? "بستن" : "مشاهده "}
+              title={showAbout ? "بستن" : "مشاهده "}
               bgColor="transparent"
               color="white"
               onClick={() => {
-                setShowFaq(!showFaq);
+                setshowAbout(!showAbout);
               }}
             />
           </div>
           <p className="text-white/60  text-[14px] lg:text-[16px] px-6 mt-5">
             من شیما مصدق کارشناس مدیریت بیمه با 14 سال تجربه در شرکت بیمه آسیا ،
-            آماده ارائه مشاوره و صدور بیمه نامه به شما در هر ساعت از شبانه روز
+            آماده ارائه مشاوره و خدمات بیمه ای به شما در هر ساعت از شبانه روز
             می باشم.
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
-            صدور بیمه نامه به صورت نقد و اقساط متناسب با توانایی و درخواست شما
+            صدور بیمه نامه به صورت نقد و اقساط ، متناسب با توانایی و درخواست شما
             صورت می پذیرد و باز پرداخت اقساط بدون چک و در بازه زمانی 2 تا 8 ماه
-            صورت می گیرد
+            امکان پذیر است
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
-            هدف ما ارائه بهترین راهکارهای بیمه ای بر اساس نیاز واقعی شماست، با
+            هدف من ارائه بهترین راهکارهای بیمه ای بر اساس نیاز واقعی شماست، با
             شفافیت صداقت و خدمات حرفه ای
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
             ارتباط ما با شما بعد از صدور بیمه نامه به پایان نمی رسد . از پیگیری
-            امور بیمه نامه و پاسخگویی به سوالات تا راهنمایی و همراهی در زمان
-            خسارت در کنار شما هستم تا با آرامش و اطمینان بیشتری از پوشش بیمه خود
+            امور بیمه نامه و پاسخگویی به پرسش ها تا راهنمایی و همراهی در زمان
+            خسارت در کنار شما هستم تا با آرامش و اطمینان بیشتری از پوشش بیمه ای خود
             استفاده کنید
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
-            راه های ارتباطی با ما از طریق واتس آپ ، تلگرام ، بله ، روبیکا و تماس تلفنی
+           برای دریافت مشاوره و خدمات بیمه ای  میتوانید از طریق شبکه های اجتماعی یا تماس تلفنی با من در ارتباط باشید
             <br />
             <br />
             تلفن تماس: 541 541 6 0913
@@ -85,8 +85,8 @@ export default function About() {
                 transition={{ duration: 0.5, delay: index * 0.12 }}
                 className=" border backdrop-blur-xl border-white/60 bg-white/25 hover:bg-white/45 mb-10 h-30 rounded-2xl flex flex-col justify-center items-center gap-2"
               >
-                <span className="text-insurance text-[13px]">{item.title}</span>
-                <span className="text-insuranc text-[13px]">{item.desc}</span>
+                <span className="text-white text-[13px]">{item.title}</span>
+                <span className="text-insurance text-[13px]">{item.desc}</span>
               </motion.div>
             ))}
           </div>

@@ -51,15 +51,15 @@ export default function HeroContent() {
               <span>با اطمینان زندگی کنید </span>
               <br />
               <span>، </span>
-              <span className=" ">ما کنار شما هستیم</span>
+              <span>ما کنار شما هستیم</span>
             </div>
-            <div className="text-[20px] iphon11:text-[24px] md:hidden flex flex-col font-bold mt-5 text-insurance ">
+            <div className="text-[20px] iphon11:text-[21px] md:hidden flex flex-col font-bold text-insurance ">
               <span>آینده ای مطمئن</span>
-              <span className=" ">با انتخابی هوشمند</span>
+              <span>با انتخابی هوشمند</span>
             </div>
           </motion.h1>
           <motion.div className="flex flex-col gap-2  " variants={item}>
-            <p className="mt-5 md:mt-0 flex font-bold justify-center md:justify-start rounded-full text-[16px] md:text-[14px] xl:text-[16px] text-insurance transition hover:scale-105 ">
+            <p className=" md:mt-0 flex font-bold justify-center md:justify-start rounded-full text-[16px] md:text-[14px] xl:text-[16px] text-insurance transition hover:scale-105 ">
               شیما مصدق
             </p>
             <div className=" text-[14px] leading-7 text-insurance/80 ">

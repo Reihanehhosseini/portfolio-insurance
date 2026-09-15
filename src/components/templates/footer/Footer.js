@@ -21,16 +21,16 @@ export default function Footer() {
       <div className="flex gap-1 sm:gap-3 ">
         <div className="rounded-full  w-8 h-8 flex items-center justify-center border-box">
           <a href="https://instagram.com/shimaa_msd66" target="_blank">
-            <IoLogoInstagram size={20} className="text-white" />
+            <IoLogoInstagram size={20} className="text-white" rel="noopener noreferrer" aria-label="اینستاگرام شیما مصدق"/>
           </a>
         </div>
         <div className="rounded-full  w-8 h-8 flex items-center justify-center border-box">
-          <a href="https://wa.me/989136541541" target="_blank">
+          <a href="https://wa.me/989136541541" target="_blank" rel="noopener noreferrer" aria-label="واتس آپ شیما مصدق">
             <MdOutlineWhatsapp size={22} className="text-white" />
           </a>
         </div>
         <div className="rounded-full  w-8 h-8 flex items-center justify-center border-box">
-          <a href="https://t.me/989136541541" target="_blank">
+          <a href="https://t.me/989136541541" target="_blank" rel="noopener noreferrer" aria-label="تلگرام شیما مصدق">
             <LiaTelegram size={20} className="text-white" />
           </a>
         </div>

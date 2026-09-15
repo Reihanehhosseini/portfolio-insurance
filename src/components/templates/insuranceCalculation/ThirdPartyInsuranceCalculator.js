@@ -48,9 +48,9 @@ export default function ThirdPartyInsuranceCalculator() {
         {!showCalc && (
           <div className="h-80 bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center justify-start flex flex-col gap-12 items-start py-12 px-8">
             <div className=" rounded-2xl flex flex-col gap-5 items-center justify-start w-[60%]">
-              <h1 className="text-insurance font-bold text-[18px] flex justify-start w-full">
+              <h3 className="text-insurance font-bold text-[18px] flex justify-start w-full">
                 محاسبه آنلاین بیمه خودرو
-              </h1>
+              </h3>
               <p className="text-insurance-text text-[14px] ">
                 جهت محاسبه حق بیمه خود دکمه شروع را فشار دهید
               </p>
@@ -74,9 +74,9 @@ export default function ThirdPartyInsuranceCalculator() {
             >
               {/* HEADER */}
               <div className=" rounded-2xl flex flex-col gap-5 px-5  items-center">
-                <h1 className="text-insurance font-bold text-[16px]">
-                  محاسبه سریع بیمه خودرو
-                </h1>
+                <h3 className="text-insurance font-bold text-[16px]">
+                  محاسبه آنلاین بیمه خودرو
+                </h3>
                 <p className="text-insurance-text text-[14px]">
                   اطلاعات خودرو خود را وارد کنید
                 </p>
@@ -383,9 +383,9 @@ export default function ThirdPartyInsuranceCalculator() {
       <section className="hidden w-full py-10 h-auto lg:flex bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center">
         <form onSubmit={formik.handleSubmit} className="px-10 flex-2 ">
           <div className=" rounded-2xl flex flex-col gap-2  mb-10">
-            <h1 className="text-insurance font-bold text-[16px]">
-              محاسبه سریع بیمه خودرو
-            </h1>
+            <h3 className="text-insurance font-bold text-[16px]">
+              محاسبه آنلاین بیمه خودرو
+            </h3>
             <p className="text-insurance-text text-[14px]">
               اطلاعات خودرو خود را وارد کنید
             </p>
@@ -644,10 +644,6 @@ export default function ThirdPartyInsuranceCalculator() {
 // ==========================================
 // Components
 // ==========================================
-
-function SectionTitle({ children }) {
-  return <h3 className="mb-5 text-lg font-bold text-insurance">{children}</h3>;
-}
 
 function Field({ label, children }) {
   return (

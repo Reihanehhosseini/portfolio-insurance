@@ -13,32 +13,32 @@ import {
 
 const steps = [
   {
-    number: "01",
-    title: "1.مشاوره",
+    number: "1",
+    title: "مشاوره",
     description: "پس از تماس با ما ، نیازها و شرایط شما بررسی و تحلیل میشود",
     icon: Headphones,
   },
   {
-    number: "02",
-    title: "2.اطلاعات اولیه ",
+    number: "2",
+    title: "اطلاعات اولیه",
     description: " اطلاعات و مدارک مورد نیاز بیمه نامه به صورت آنلاین دریافت میشود",
     icon: BookOpen,
   },
   {
-    number: "03",
-    title: "3.استعلام قیمت ",
+    number: "3",
+    title: "استعلام قیمت",
     description: "حق بیمه محاسبه و به بیمه گذار اعلام می گردد ",
     icon: FilePenLine,
   },
   {
-    number: "04",
-    title: "4.پرداخت حق بیمه به صورت آنلاین",
-    description: "پرداخت کارت به کارت حق بیمه و ارسال فیش واریز",
+    number: "4",
+    title: "پرداخت حق بیمه",
+    description: "پرداخت  حق بیمه به صورت کارت به کارت و ارسال فیش واریز",
     icon: UserRoundCheck,
   },
   {
-    number: "05",
-    title: "5.صدور و دریافت بیمه نامه",
+    number: "5",
+    title: "صدور و دریافت بیمه نامه",
     description: "بیمه نامه به صورت آنلاین صادر و به آدرس شما ارسال می گردد",
     icon: ShieldCheck,
   },
@@ -50,14 +50,14 @@ export default function InsuranceProcess() {
       id="process"
       className="relative overflow-hidden  px-5 sm:px-8 lg:px-12 mb-10 lg:mb-20  rounded-t-4xl  z-150 transform bg-white pt-8  sm:translate-y-0"
     >
-      <div className="absolute bott0m-20 left-8 hidden opacity-40 sm:block"></div>
+      <div className="absolute bottom-20 left-8 hidden opacity-40 sm:block"></div>
       <div className="relative z-10 mx-auto max-w-7xl">
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="text-[16px] lg:text-xl font-bold leading-tight text-insurance  ">
             نحوه صدور بیمه نامه
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-gray-500 sm:text-base">
-            از مشاوره تا دریافت بیمه نامه ، در چند قدم ساده همراه شما هستم
+           از مشاوره  و استعلام تا صدور و دریافت بیمه نامه ، در چند قدم ساده همراه شما هستیم.
           </p>
           <div className="mx-auto mt-7 flex items-center justify-center gap-2">
             <span className="h-px w-10 bg-insurance/50" />
@@ -92,9 +92,9 @@ export default function InsuranceProcess() {
                       className="text-insurance"
                     />
                   </div>
-                  <div className="mt-7 msx-w-[230px]">
+                  <div className="mt-7 max-w-57.5">
                     <h3 className="text-[15px] font-bold text-insurance">
-                      {step.title}
+                      {step.number}.{step.title}
                     </h3>
                     <p className="mt-3 text-sm leading-7 text-gray-500">
                       {step.description}
@@ -130,7 +130,7 @@ export default function InsuranceProcess() {
                   </div>
                   <div className="text-right">
                     <h3 className="text-[14px] font-bold text-insurance sm:text-[16px]">
-                      {step.title}
+                      {step.number}.{step.title}
                     </h3>
                     <p className="mt-1.5 text-xs leading-6 text-gray-500 sm:text-sm">
                       {step.description}

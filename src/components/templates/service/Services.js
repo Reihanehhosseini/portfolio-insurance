@@ -19,9 +19,9 @@ export default function Services() {
       }}
       className="w-full bg-white flex flex-col items-center justify-center py-8 sm:py-16 gap-7   rounded-t-4xl transform -translate-y-6 mb-10 sm:mb-0 sm:-translate-y-55 md:-translate-y-15 "
     >
-      <h1 className="text-[16px] lg:text-xl  font-bold text-insurance">
+      <h2 className="text-[16px] lg:text-xl  font-bold text-insurance">
         خدمات بیمه ای ما
-      </h1>
+      </h2>
       <p className=" text-sm text-center text-gray-500 px-6 leading-8 mb-5">
         ما در زمینه های بیمه ای ذیل آماده ارائه خدمات به صورت شرایطی به شما می
         باشیم، اعم از:
@@ -40,7 +40,7 @@ export default function Services() {
                 {item.icon}
               </span>
             </div>
-            <h4 className="text-insurance text-[14px] text-center!">{item.title}</h4>
+            <h3 className="text-insurance text-[14px] text-center!">{item.title}</h3>
             <p className="text-[11px] hidden min-[1300px]:block text-center!">{item.desc}</p>
           </motion.div>
         ))}
@@ -53,12 +53,12 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.12 }}
-            className="w-40 h-50 bg-white rounded-xl   shadow-[2px_3px_5px_rgba(36,52,71,0.7)] flex flex-col items-center justify-center gap-4 py-3 transition hover:scale-105"
+            className="w-40 h-50 px-3 bg-white rounded-xl shadow-[2px_3px_5px_rgba(36,52,71,0.7)] flex flex-col items-center justify-center gap-4 py-3 transition hover:scale-105 text-center"
           >
             <div className="w-full flex items-center justify-center">
               <span className="bg-box rounded-full p-3">{item.icon}</span>
             </div>
-            <h4 className="text-insurance">{item.title}</h4>
+            <h3 className="text-insurance">{item.title}</h3>
             <p className="text-[11px] text-insurance-text">{item.desc}</p>
           </motion.div>
         ))}

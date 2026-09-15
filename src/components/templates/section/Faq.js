@@ -85,9 +85,9 @@ export default function FAQ() {
                     <BsChatLeftText className="text-insurance w-5 h-5" />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-white text-[12px] lg:text-[15px]">
+                    <h2 className="text-white text-[12px] lg:text-[15px]">
                       سوالات متداول
-                    </span>
+                    </h2>
                     <span className="text-white text-[10px] hidden lg:block">
                       پاسخ به پرسش های شما
                     </span>
