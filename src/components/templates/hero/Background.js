@@ -6,12 +6,14 @@ export default function Background() {
     <div className="overflow-hidden ">
       <img
         src="/images/hero-mob (1).PNG"
-        alt="background"
+        alt=""
+        aria-hidden="true"
         className="block md:hidden  overflow-hidden w-full h-full object-cover object-center select-none pointer-events-none 500:-translate-y-25 sm:-translate-y-60"
       />
       <img
         src="/images/hero-full.PNG"
-        alt="background"
+        alt=""
+        aria-hidden="true"
         className="hidden md:block  w-full h-full object-cover object-center select-none pointer-events-none! -translate-y-10!"
       />
     </div>

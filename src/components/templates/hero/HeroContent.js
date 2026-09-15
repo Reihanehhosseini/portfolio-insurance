@@ -39,42 +39,41 @@ export default function HeroContent() {
     >
       <div className="mx-auto w-full  px-3">
         <div className="flex flex-col gap-4 480:gap-5 text-center md:text-right">
-          <motion.h3 variants={item}>
+          <motion.p variants={item}>
             <span className="hidden md:block text-[13px] lg:text-[16px] text-[#23395B] font-bold">
               برای امروز، برای فردا
             </span>
-          </motion.h3>
+          </motion.p>
           <motion.h1
             variants={item}
-            className="text-[18px] xl:text-[24px] md:flex font-vazirmatn! text-insurance hidden"
           >
-            <span className="font-vazirmatn!">با اطمینان زندگی کنید </span>
-            <br />
-            <span>، </span>
-            <span className="font-vazirmatn! ">ما کنار شما هستیم</span>
-          </motion.h1>
-          <motion.h1
-            variants={item}
-            className="text-[20px] iphon11:text-[24px] md:hidden flex flex-col font-vazirmatn! text-insurance "
-          >
-            <span className="font-vazirmatn!">آینده ای مطمئن</span>
-            <span className="font-vazirmatn! ">با انتخابی هوشمند</span>
+            <div className="text-[18px] xl:text-[24px] md:flex  text-insurance hidden">
+              <span>با اطمینان زندگی کنید </span>
+              <br />
+              <span>، </span>
+              <span className=" ">ما کنار شما هستیم</span>
+            </div>
+            <div className="text-[20px] iphon11:text-[24px] md:hidden flex flex-col font-bold mt-5 text-insurance ">
+              <span>آینده ای مطمئن</span>
+              <span className=" ">با انتخابی هوشمند</span>
+            </div>
           </motion.h1>
           <motion.div className="flex flex-col gap-2  " variants={item}>
-            <button className="mt-5 md:mt-0 flex font-bold justify-center md:justify-start rounded-full text-[16px] md:text-[14px] xl:text-[16px] text-[#23395B] transition hover:scale-105 ">
+            <p className="mt-5 md:mt-0 flex font-bold justify-center md:justify-start rounded-full text-[16px] md:text-[14px] xl:text-[16px] text-insurance transition hover:scale-105 ">
               شیما مصدق
-            </button>
-            <div className=" text-[14px] leading-7 text-[#6B7280] ">
-              <span className="">
-                ارائه انواع بیمه های معتبر ، مشاوره تخصصی و خدمات بیمه ای
+            </p>
+            <div className=" text-[14px] leading-7 text-insurance/80 ">
+              <span>
+                ارائه مشاوره تخصصی و خدمات بیمه آسیا در زمینه بیمه خودرو،
+                مسئولیت ، آتش سوزی و سایر بیمه ها
               </span>
             </div>
           </motion.div>
           <motion.p
             variants={item}
-            className="text-[12px] lg:text-[14px] text-insurance-text"
+            className="text-[12px] lg:text-[14px] text-insurance/80"
           >
-             14 سال تجربه در صنعت بیمه 
+            14 سال تجربه در صنعت بیمه
           </motion.p>
           <motion.div
             variants={item}
@@ -99,13 +98,13 @@ export default function HeroContent() {
           >
             <div className="flex relative">
               <span className="bg-white border border-white rounded-full p-3">
-                <MdOutlineElderlyWoman size={20} className="text-insurance"/>
+                <MdOutlineElderlyWoman size={20} className="text-insurance" />
               </span>
               <span className="absolute right-7 bg-white border border-white rounded-full p-3">
-                <MdOutlineMan4 size={20} className="text-insurance"/>
+                <MdOutlineMan4 size={20} className="text-insurance" />
               </span>
               <span className="absolute right-15 bg-white  border border-white rounded-full p-3">
-                <MdWoman size={20} className="text-insurance"/>
+                <MdWoman size={20} className="text-insurance" />
               </span>
             </div>
             <div className="text-insurance-text flex flex-col gap-3">
