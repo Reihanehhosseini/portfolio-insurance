@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -106,9 +107,11 @@ export default function Navbar() {
         </nav>
         <div className="text-[16px] font-semibold text-primary flex flex-col gap-1 justify-center text-center font-myfont">
           <div className="w-full flex justify-center md:mt-2 ">
-            <img
-              src="/images/logoblue.png"
-              alt="logo"
+            <Image
+              src="/images/logoblueC.webp"
+              alt="لوگوی بیمه آسیا"
+              width={476}
+              height={497}
               className="w-12 md:w-13 xl:w-15"
             />
           </div>

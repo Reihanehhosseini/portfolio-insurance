@@ -25,7 +25,7 @@ const aboutInfo = [
 export default function About() {
   const [showAbout, setshowAbout] = useState(false);
   return (
-    <div className="w-full rounded-2xl bg-[url(/images/blue.PNG)]" id="about">
+    <div className="w-full rounded-2xl bg-[url(/images/blueC.webp)]" id="about">
       <div className=" w-full lg:px-5">
         <div
           className={` ${showAbout ? "h-218" : "h-21"} overflow-hidden bg-transparent  rounded-2xl flex flex-col justify-between px-1  text-justify `}
