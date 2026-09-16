@@ -44,9 +44,7 @@ export default function HeroContent() {
               برای امروز، برای فردا
             </span>
           </motion.p>
-          <motion.h1
-            variants={item}
-          >
+          <motion.h1 variants={item}>
             <div className="text-[18px] xl:text-[24px] md:flex  text-insurance hidden">
               <span>با اطمینان زندگی کنید </span>
               <br />
@@ -64,8 +62,8 @@ export default function HeroContent() {
             </p>
             <div className=" text-[14px] leading-7 text-insurance/80 ">
               <span>
-                ارائه مشاوره تخصصی و خدمات بیمه آسیا در اصفهان ، در زمینه بیمه خودرو،
-                مسئولیت ، آتش سوزی و سایر بیمه ها
+                ارائه مشاوره تخصصی و خدمات بیمه آسیا در اصفهان ، در زمینه بیمه
+                خودرو، مسئولیت ، آتش سوزی و سایر بیمه ها
               </span>
             </div>
           </motion.div>
@@ -79,18 +77,20 @@ export default function HeroContent() {
             variants={item}
             className=" flex mt-4 md:mt-0 gap-4 480:gap-2 md:gap-4 flex-col md:flex-row w-full items-center  "
           >
-            <motion.button
+            <motion.a
+              href="tel:+989136541541"
               whileTap={{ scale: 0.95 }}
-              className=" text-[12px] xl:text-[14px]  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-insurance px-6 py-2 text-white transition hover:scale-105"
+              className="text-center text-[12px] xl:text-[14px] shadow-[5px_5px_5px_rgba(36,52,71,0.7)] cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-insurance px-6 py-2 text-white transition hover:scale-105"
             >
-              <a href="tel:+989136541541">مشاوره رایگان</a>
-            </motion.button>
-            <motion.button
+              مشاوره رایگان
+            </motion.a>
+            <motion.a
+              href="#inquiry"
               whileTap={{ scale: 0.95 }}
-              className="text-[12px] xl:text-[14px]  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)] px-6 py-2 text-insurance transition  hover:scale-105"
+              className="text-center text-[12px] xl:text-[14px]  shadow-[5px_5px_5px_rgba(36,52,71,0.7)] cursor-pointer rounded-full w-38 iphon11:w-40 md:w-35 xl:w-45 bg-[rgba(255,255,255,0.75)] backdrop-blur-[10px] border border-[rgba(36,52,71,0.15)] px-6 py-2 text-insurance transition  hover:scale-105"
             >
-              <a href="#inquiry">استعلام حق بیمه</a>
-            </motion.button>
+              استعلام حق بیمه
+            </motion.a>
           </motion.div>
           <motion.div
             variants={item}

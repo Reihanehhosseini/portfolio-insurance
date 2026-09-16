@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 export default function Background() {
@@ -14,12 +13,6 @@ export default function Background() {
         aria-hidden="true"
         className="block md:hidden  overflow-hidden w-full h-full object-cover object-center select-none pointer-events-none 500:-translate-y-25 sm:-translate-y-60"
       />
-      {/* <img
-        src="/images/hero-mob (1).PNG"
-        alt=""
-        aria-hidden="true"
-        className="block md:hidden  overflow-hidden w-full h-full object-cover object-center select-none pointer-events-none 500:-translate-y-25 sm:-translate-y-60"
-      /> */}
       <Image
         src="/images/hero-full.PNG"
         alt=""
@@ -30,12 +23,6 @@ export default function Background() {
         aria-hidden="true"
         className="hidden md:block  w-full h-full object-cover object-center select-none pointer-events-none! -translate-y-10!"
       />
-      {/* <img
-        src="/images/hero-full.PNG"
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block  w-full h-full object-cover object-center select-none pointer-events-none! -translate-y-10!"
-      /> */}
     </div>
   );
 }

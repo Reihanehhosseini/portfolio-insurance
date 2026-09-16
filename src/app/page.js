@@ -7,18 +7,19 @@ import Section from "@/components/templates/section/Section";
 import Footer from "@/components/templates/footer/Footer";
 import Whyme from "@/components/templates/whyme/Whyme";
 
-
 export default function Home() {
   return (
     <div className="relative  ">
       <Navbar />
-      <Hero />
-      <Services />
-      <InsuranceCalculation/>
-      <InsuranceProcess/>
-      <Section/>
-      <Whyme/>
-      <Footer/>
+      <main>
+        <Hero />
+        <Services />
+        <InsuranceCalculation />
+        <InsuranceProcess />
+        <Section />
+        <Whyme />
+      </main>
+      <Footer />
     </div>
   );
 }

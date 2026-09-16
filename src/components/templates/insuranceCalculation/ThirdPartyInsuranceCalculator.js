@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { useFormik } from "formik";
 import { calculateThirdPartyInsurance } from "@/utils/thirdPartyInsurance/calculator";
 import { THIRD_PARTY_1405 } from "@/utils/thirdPartyInsurance/rates1405";
@@ -646,13 +646,16 @@ export default function ThirdPartyInsuranceCalculator() {
 // ==========================================
 
 function Field({ label, children }) {
+  const fieldId = children.props.id || children.props.name;
   return (
     <div className="mb-5">
-      <label className="mb-2 block text-sm font-medium text-gray-700">
+      <label htmlFor={fieldId} className="mb-2 block text-sm font-medium text-gray-700">
         {label}
       </label>
 
-      {children}
+      {React.cloneElement(children, {
+        id:fieldId,
+      })}
     </div>
   );
 }
