@@ -17,30 +17,41 @@ const myFont = localFont({
   ],
   variable: "--font-myfont",
 });
-const estedad = localFont({
-  src: [
-    {
-      path: "../fonts/estedad/Estedad-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/estedad/Estedad-Medium.ttf",
-      weight: "300",
-      style: "normal",
-    },
-  ],
-  variable: "--font-estedad",
-});
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="fa"
       dir="rtl"
-      className={` ${myFont.variable}  ${estedad.variable} h-full antialiased`}
+      className={` ${myFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-myfont!">{children}</body>
+      <body className="min-h-full flex flex-col font-myfont!">
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context":"https://schema.org",
+            "@type":"ProfessionalService",
+            name:"شیما مصدق",
+            description:"مشاور بیمه آسیا با 14 سال تجربه در ارائه مشاوره، صدور و پیگیری خدمات بیمه ای",
+            areaServed:{
+              "@type":"City",
+              name:"اصفهان",
+            },
+            knowsAbout:[
+              "بیمه اتومبیل",
+              "بیمه مسئولیت",
+              "بیمه آتش سوزی",
+              "بیمه عمر",
+              "بیمه درمانی",
+              "بیمه مسافرتی",
+              "بیمه حمل  و نقل",
+            ]
+          })
+        }}
+        />
+        {children}
+        </body>
     </html>
   );
 }

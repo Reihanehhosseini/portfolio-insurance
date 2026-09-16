@@ -64,7 +64,7 @@ export default function HeroContent() {
             </p>
             <div className=" text-[14px] leading-7 text-insurance/80 ">
               <span>
-                ارائه مشاوره تخصصی و خدمات بیمه آسیا در زمینه بیمه خودرو،
+                ارائه مشاوره تخصصی و خدمات بیمه آسیا در اصفهان ، در زمینه بیمه خودرو،
                 مسئولیت ، آتش سوزی و سایر بیمه ها
               </span>
             </div>

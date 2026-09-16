@@ -13,8 +13,8 @@ const aboutInfo = [
   },
   {
     id: 2,
-    title: "تجربه",
-    desc: "14 سال",
+    title: "محدوده ارائه خدمات",
+    desc: "سراسر کشور",
   },
   {
     id: 3,
@@ -52,8 +52,8 @@ export default function About() {
           </div>
           <p className="text-white/60  text-[14px] lg:text-[16px] px-6 mt-5">
             من شیما مصدق کارشناس مدیریت بیمه با 14 سال تجربه در شرکت بیمه آسیا ،
-            آماده ارائه مشاوره و خدمات بیمه ای به شما در هر ساعت از شبانه روز
-            می باشم.
+            آماده ارائه مشاوره و خدمات بیمه ای به شما در هر ساعت از شبانه روز می
+            باشم.
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
             صدور بیمه نامه به صورت نقد و اقساط ، متناسب با توانایی و درخواست شما
@@ -67,11 +67,12 @@ export default function About() {
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
             ارتباط ما با شما بعد از صدور بیمه نامه به پایان نمی رسد . از پیگیری
             امور بیمه نامه و پاسخگویی به پرسش ها تا راهنمایی و همراهی در زمان
-            خسارت در کنار شما هستم تا با آرامش و اطمینان بیشتری از پوشش بیمه ای خود
-            استفاده کنید
+            خسارت در کنار شما هستم تا با آرامش و اطمینان بیشتری از پوشش بیمه ای
+            خود استفاده کنید
           </p>
           <p className="text-white/60 text-[14px] lg:text-[16px] px-6">
-           برای دریافت مشاوره و خدمات بیمه ای  میتوانید از طریق شبکه های اجتماعی یا تماس تلفنی با من در ارتباط باشید
+            برای دریافت مشاوره و خدمات بیمه ای میتوانید از طریق شبکه های اجتماعی
+            یا تماس تلفنی با من در ارتباط باشید
             <br />
             <br />
             تلفن تماس: 541 541 6 0913
@@ -83,10 +84,14 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
-                className=" border backdrop-blur-xl border-white/60 bg-white/25 hover:bg-white/45 mb-10 h-30 rounded-2xl flex flex-col justify-center items-center gap-2"
+                className=" border backdrop-blur-xl border-white/60 bg-white/25 hover:bg-white/45 mb-10 h-25 rounded-2xl flex flex-col justify-center items-center gap-2"
               >
-                <span className="text-white text-[13px]">{item.title}</span>
-                <span className="text-insurance text-[13px]">{item.desc}</span>
+                <span className="text-white text-[12px] iphon11:text-[13px]">
+                  {item.title}
+                </span>
+                <span className="text-insurance text-[13px] iphon11:text-[13px]">
+                  {item.desc}
+                </span>
               </motion.div>
             ))}
           </div>
