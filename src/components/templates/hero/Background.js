@@ -4,7 +4,7 @@ export default function Background() {
   return (
     <div className="overflow-hidden ">
       <Image
-        src="/images/hero-mob (1).PNG"
+        src="/images/hero-mobC.webp"
         alt=""
         width={1011}
         height={1556}
