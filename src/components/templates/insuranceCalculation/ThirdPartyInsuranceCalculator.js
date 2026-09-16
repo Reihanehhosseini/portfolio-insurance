@@ -46,7 +46,7 @@ export default function ThirdPartyInsuranceCalculator() {
     <>
       <section dir="rtl" className="mx-auto w-full lg:hidden ">
         {!showCalc && (
-          <div className="h-80 bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center justify-start flex flex-col gap-12 items-start py-12 px-8">
+          <div className="h-80 bg-[url(/images/IMG_9084C.webp)] bg-no-repeat bg-cover bg-center justify-start flex flex-col gap-12 items-start py-12 px-8">
             <div className=" rounded-2xl flex flex-col gap-5 items-center justify-start w-[60%]">
               <h3 className="text-insurance font-bold text-[18px] flex justify-start w-full">
                 محاسبه آنلاین بیمه خودرو
@@ -380,7 +380,7 @@ export default function ThirdPartyInsuranceCalculator() {
         )}
       </section>
       {/* ------ windows -------------------------------------------------- */}
-      <section className="hidden w-full py-10 h-auto lg:flex bg-[url(/images/IMG_9084.PNG)] bg-no-repeat bg-cover bg-center">
+      <section className="hidden w-full py-10 h-auto lg:flex bg-[url(/images/IMG_9084C.webp)] bg-no-repeat bg-cover bg-center">
         <form onSubmit={formik.handleSubmit} className="px-10 flex-2 ">
           <div className=" rounded-2xl flex flex-col gap-2  mb-10">
             <h3 className="text-insurance font-bold text-[16px]">
