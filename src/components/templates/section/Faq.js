@@ -35,7 +35,7 @@ const faqs = [
     id: 5,
     question: "روند صدور بیمه‌نامه چقدر زمان می‌برد؟",
     answer:
-      "زمان صدور به نوع بیمه و شرایط آن بستگی دارد و پس از بررسی مدارک، زمان تقریبی به شما اعلام می‌شود.",
+      "زمان صدور به نوع بیمه و شرایط آن بستگی دارد اما معمولا بین یک تا چندساعت زمان میبرد.",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const faqs = [
     id: 8,
     question: "چگونه می‌توانم بیمه‌نامه خود را تمدید کنم؟",
     answer:
-      "پیش از پایان اعتبار بیمه‌نامه می‌توانید برای بررسی شرایط تمدید و دریافت راهنمایی با من در ارتباط باشید.",
+      "10 روز پیش از پایان اعتبار بیمه‌نامه با شما تماس حاصل میشود و در صورت تمایل بیمه نامه شما تمدید میگردد .",
   },
 ];
 
@@ -117,27 +117,21 @@ export default function FAQ() {
                     }}
                     className={`overflow-hidden rounded-2xl border backdrop-blur-xl transition-all duration-300 ${isOpen ? "border-white/70 bg-[#f8f4ed]/80" : "border-white/60 bg-white/25 hover:bg-white/45"}`}
                   >
-                    {/* Question */}
                     <button
                       type="button"
                       onClick={() => toggleFAQ(faq.id)}
                       aria-expanded={isOpen}
                       className="flex w-full items-center gap-4 px-5 py-5 text-right sm:px-6 sm:py-5"
                     >
-                      {/* Number */}
                       <span className="shrink-0 text-sm font-medium tracking-wider text-insurance sm:text-base">
                         {String(faq.id).padStart(2, "0")}
                       </span>
 
-                      {/* Divider */}
                       <span className="h-7 w-px shrink-0 bg-insurance/20" />
 
-                      {/* Question */}
                       <span className="flex-1 text-sm font-medium leading-7 text-insurance sm:text-base">
                         {faq.question}
                       </span>
-
-                      {/* Icon */}
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-insurance">
                         {isOpen ? (
                           <Minus size={18} strokeWidth={1.7} />
@@ -147,7 +141,6 @@ export default function FAQ() {
                       </span>
                     </button>
 
-                    {/* Answer */}
                     <AnimatePresence initial={false}>
                       {isOpen && (
                         <motion.div
