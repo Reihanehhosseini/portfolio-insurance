@@ -1,7 +1,5 @@
-
 import "./globals.css";
 import localFont from "next/font/local";
-
 
 export const metadata = {
   metadataBase: new URL("https://mosadegh-insurance.ir"),
@@ -11,18 +9,23 @@ export const metadata = {
   title: "شیما مصدق | مشاور بیمه آسیا در اصفهان ",
   description:
     "شیما مصدق ، مشاور بیمه آسیا با 14 سال تجربه در ارائه مشاوره و خدمات بیمه ای : بیمه اتومبیل ، مسئولیت ، آتش سوزی و سایر خدمات بیمه ای  در اصفهان",
-  url: "https://mosadegh-insurance.ir",
-  siteName:"شیما مصدق",
-  locale:"fa_IR",
-  type:"website",
-  images:[
-    {
-      url:"/hero-full.PNG",
-      width:1721,
-      height:914,
-      alt:"شیما مصدق مشاور بیمه آسیا در اصفهان"
-    }
-  ]
+  openGraph: {
+    title: "شیما مصدق | مشاور بیمه آسیا در اصفهان ",
+    description:
+      "شیما مصدق ، مشاور بیمه آسیا با 14 سال تجربه در ارائه مشاوره و خدمات بیمه ای : بیمه اتومبیل ، مسئولیت ، آتش سوزی و سایر خدمات بیمه ای  در اصفهان",
+    url: "https://mosadegh-insurance.ir",
+    siteName: "شیما مصدق",
+    locale: "fa_IR",
+    type: "website",
+    images: [
+      {
+        url: "/hero-full.PNG",
+        width: 1721,
+        height: 914,
+        alt: "شیما مصدق مشاور بیمه آسیا در اصفهان",
+      },
+    ],
+  },
 };
 const myFont = localFont({
   src: [
