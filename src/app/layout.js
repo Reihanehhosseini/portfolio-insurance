@@ -4,6 +4,10 @@ import localFont from "next/font/local";
 
 
 export const metadata = {
+  metadataBase: new URL("https://mosadegh-insurance.ir"),
+  alternates:{
+    canonical:"/",
+  },
   title: "شیما مصدق | مشاور بیمه آسیا در اصفهان ",
   description: "شیما مصدق ، مشاور بیمه آسیا با 14 سال تجربه در ارائه مشاوره و خدمات بیمه ای : بیمه اتومبیل ، مسئولیت ، آتش سوزی و سایر خدمات بیمه ای  در اصفهان",
 };
