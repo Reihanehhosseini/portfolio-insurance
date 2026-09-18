@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
               "@type": "ProfessionalService",
               name: "شیما مصدق",
               telephone:"+989136541541",
+              image:"https://mosadegh-insurance.ir/hero-full.PNG",
               description:
                 "مشاور بیمه آسیا با 14 سال تجربه در ارائه مشاوره، صدور و پیگیری خدمات بیمه ای",
               areaServed: {
