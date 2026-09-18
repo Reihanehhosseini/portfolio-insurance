@@ -53,6 +53,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "شیما مصدق",
+              telephone:"+989136541541",
               description:
                 "مشاور بیمه آسیا با 14 سال تجربه در ارائه مشاوره، صدور و پیگیری خدمات بیمه ای",
               areaServed: {
